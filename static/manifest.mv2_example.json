@@ -1,0 +1,26 @@
+{
+  "name": "Filos Chat",
+  "description": "Chrome extension to generate email responses using GPT-3",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "F.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "web_accessible_resources": [ "pageWorld.js" ],
+  "permissions": [
+    "https://mail.google.com/"
+  ],
+  "manifest_version": 2
+}
