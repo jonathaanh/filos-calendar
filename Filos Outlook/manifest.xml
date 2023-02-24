@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
-  <Id>c5ef9914-13ce-4110-881a-7a2dc9e7ca8c</Id>
+  <Id>97c3efb5-0926-426c-9c8f-50e5dfef9641</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Filos"/>
-  <Description DefaultValue="A template to get started."/>
-  <IconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-128.png"/>
+  <DisplayName DefaultValue="Filos Outlook"/>
+  <Description DefaultValue="An Outlook Add-in that uses OpenAI’s GPT-3 to generate personalized, professional emails with just a few clicks."/>
+  <IconUrl DefaultValue="https://localhost:3000/assets/filos-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/filos-128.png"/>
   <SupportUrl DefaultValue="https://www.contoso.com/help"/>
   <AppDomains>
     <AppDomain>https://www.contoso.com</AppDomain>
@@ -43,7 +43,7 @@
       <Host xsi:type="MailHost">
         <DesktopFormFactor>
           <FunctionFile resid="Commands.Url"/>
-          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+          <ExtensionPoint xsi:type="MessageComposeCommandSurface">
             <OfficeTab id="TabDefault">
               <Group id="msgReadGroup">
                 <Label resid="GroupLabel"/>
@@ -85,18 +85,18 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/filos-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/filos-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/filos-80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html"/>
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="Contoso Add-in"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Taskpane"/>
-        <bt:String id="ActionButton.Label" DefaultValue="Perform an action"/>
+        <bt:String id="GroupLabel" DefaultValue="Filos Email Generator"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Email Generation Tool"/>
+        <bt:String id="ActionButton.Label" DefaultValue="Generate Email"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens a pane displaying all available properties."/>
